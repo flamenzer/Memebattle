@@ -10,7 +10,6 @@ class GUI(QMainWindow):
     def __init__(self):
         # Вызываем конструктор родительского класса
         super().__init__()
-
         # Устанавливаем заголовок окна
         self.setWindowTitle("Meme Battle")
 
@@ -37,6 +36,9 @@ class GUI(QMainWindow):
 
         # Создаем виджеты для управления игрой
         self.create_control_widgets()
+
+    def set_game(self, game):
+        self.game = game
 
     # Создаем метод для создания виджетов для отображения мемов и ситуаций
     def create_meme_widgets(self):
@@ -326,4 +328,3 @@ class GUI(QMainWindow):
     def exit_game(self):
         # Вызываем метод класса Game для выхода из игры
         self.game.exit_game()
-
