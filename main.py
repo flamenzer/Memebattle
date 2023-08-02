@@ -1,3 +1,4 @@
+# main.py
 # Импортируем необходимые библиотеки
 import sys
 from PyQt5.QtWidgets import QApplication
@@ -12,6 +13,9 @@ gui = GUI()
 
 # Создаем экземпляр класса Game
 game = Game(gui)
+
+# Передаем экземпляр класса Game в класс GUI
+gui.set_game(game)
 
 # Показываем главное окно приложения
 gui.show()
